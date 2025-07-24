@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Download, ArrowDown, Github, Linkedin } from 'lucide-react';
 import codingImage from '@/assets/coding-monitor.jpg';
-
 const HeroSection = () => {
   const [text, setText] = useState('');
   const fullText = "Hi, I'm Sudarshan G";
   const subtitle = "AI | ML | Software Engineer";
   const tagline = "Turning ideas into intelligent solutions.";
-
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -17,37 +15,24 @@ const HeroSection = () => {
         clearInterval(timer);
       }
     }, 100);
-
     return () => clearInterval(timer);
   }, []);
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={codingImage} 
-          alt="Coding Background" 
-          className="w-full h-full object-cover opacity-10"
-        />
+        <img src={codingImage} alt="Coding Background" className="w-full h-full object-cover opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/80 to-background/90" />
       </div>
 
       {/* Animated Background Particles */}
       <div className="particles">
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              width: `${Math.random() * 4 + 1}px`,
-              height: `${Math.random() * 4 + 1}px`,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${Math.random() * 3 + 3}s`
-            }}
-          />
-        ))}
+        {[...Array(50)].map((_, i) => <div key={i} className="particle" style={{
+        left: `${Math.random() * 100}%`,
+        width: `${Math.random() * 4 + 1}px`,
+        height: `${Math.random() * 4 + 1}px`,
+        animationDelay: `${Math.random() * 6}s`,
+        animationDuration: `${Math.random() * 3 + 3}s`
+      }} />)}
       </div>
 
       {/* Gradient Overlay */}
@@ -78,10 +63,9 @@ const HeroSection = () => {
               Download Resume
             </button>
             
-            <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="glass-button group"
-            >
+            <button onClick={() => document.getElementById('contact')?.scrollIntoView({
+            behavior: 'smooth'
+          })} className="glass-button group text-base">
               Connect with Me
               <ArrowDown className="w-5 h-5 ml-3 group-hover:animate-bounce" />
             </button>
@@ -89,20 +73,10 @@ const HeroSection = () => {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mt-12 animate-fade-in">
-            <a 
-              href="https://github.com/SudarshanG-coder" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="glass p-3 rounded-full hover:glow-primary transition-all duration-300 hover:scale-110"
-            >
+            <a href="https://github.com/SudarshanG-coder" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:glow-primary transition-all duration-300 hover:scale-110">
               <Github className="w-6 h-6" />
             </a>
-            <a 
-              href="https://linkedin.com/in/sudarshan-g-AI" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="glass p-3 rounded-full hover:glow-accent transition-all duration-300 hover:scale-110"
-            >
+            <a href="https://linkedin.com/in/sudarshan-g-AI" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:glow-accent transition-all duration-300 hover:scale-110">
               <Linkedin className="w-6 h-6" />
             </a>
           </div>
@@ -115,8 +89,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
