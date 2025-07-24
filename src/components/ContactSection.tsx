@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, Github, Linkedin, Send, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import colorfulCodeImage from '@/assets/colorful-code.jpg';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -82,17 +81,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-20 relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={colorfulCodeImage} 
-          alt="Colorful Code Background" 
-          className="w-full h-full object-cover opacity-10"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gradient-primary">
             Let's Connect
