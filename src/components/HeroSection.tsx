@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Download, ArrowDown, Github, Linkedin } from 'lucide-react';
+import codingImage from '@/assets/coding-monitor.jpg';
 
 const HeroSection = () => {
   const [text, setText] = useState('');
@@ -22,6 +23,16 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={codingImage} 
+          alt="Coding Background" 
+          className="w-full h-full object-cover opacity-10"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/80 to-background/90" />
+      </div>
+
       {/* Animated Background Particles */}
       <div className="particles">
         {[...Array(50)].map((_, i) => (
