@@ -1,8 +1,6 @@
 import avatarImage from '@/assets/sudarshan-avatar.jpg';
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="py-20 relative">
+  return <section id="about" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gradient-primary">
@@ -18,11 +16,7 @@ const AboutSection = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30 animate-glow-pulse" />
                 <div className="relative glass-card p-2">
-                  <img
-                    src={avatarImage}
-                    alt="Sudarshan G"
-                    className="w-80 h-80 object-cover rounded-xl"
-                  />
+                  <img src={avatarImage} alt="Sudarshan G" className="w-80 h-80 object-cover rounded-xl" />
                 </div>
               </div>
             </div>
@@ -68,22 +62,15 @@ const AboutSection = () => {
 
                 {/* Qualities */}
                 <div className="flex flex-wrap gap-3 mt-6">
-                  {['Fast Learner', 'Team Player', 'Problem Solver', 'Innovation Focused'].map((quality) => (
-                    <span 
-                      key={quality}
-                      className="px-4 py-2 glass rounded-full text-sm font-medium text-primary border border-primary/20 hover:glow-primary transition-all duration-300"
-                    >
+                  {['Fast Learner', 'Team Player', 'Problem Solver', 'Innovation Focused'].map(quality => <span key={quality} className="px-4 py-2 glass rounded-full text-sm font-medium text-primary border border-primary/20 hover:glow-primary transition-all duration-300">
                       {quality}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
