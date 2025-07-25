@@ -30,9 +30,7 @@ const AboutSection = () => {
                 
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    I'm a passionate <span className="text-primary font-semibold">AI and Machine Learning Developer</span> currently 
-                    pursuing B.E. in Electronics and Communication Engineering. My journey in technology is driven by 
-                    an insatiable curiosity to transform complex data into intelligent, scalable solutions.
+                    I'm a passionate AI and Software Engineering Intern at Deepcept AI, with a B.E. in Electronics and Communication Engineering. My journey in technology is driven by an insatiable curiosity to transform complex data into intelligent, scalable solutions.
                   </p>
                   
                   <p>
