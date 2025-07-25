@@ -45,9 +45,9 @@ const SkillsSection = () => {
       title: "DevOps & Tools",
       icon: <Container className="w-6 h-6" />,
       skills: [
-        { name: "Docker", level: 85 },
-        { name: "Git", level: 90 },
-        { name: "VS Code", level: 95 },
+        { name: "Docker", level: 75 },
+        { name: "Git", level: 70 },
+        { name: "VS Code", level: 73 },
         { name: "Linux", level: 80 }
       ]
     },
@@ -56,9 +56,9 @@ const SkillsSection = () => {
       icon: <Cpu className="w-6 h-6" />,
       skills: [
         { name: "Arduino", level: 85 },
-        { name: "Raspberry Pi", level: 80 },
+        { name: "Raspberry Pi", level: 74 },
         { name: "Circuit Design", level: 78 },
-        { name: "Sensors", level: 82 }
+        { name: "Sensors", level: 85 }
       ]
     }
   ];
