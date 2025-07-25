@@ -1,4 +1,4 @@
-import avatarImage from '@/assets/sudarshan-avatar.jpg';
+import avatarImage from '@/assets/sudarshan-professional.jpg';
 const AboutSection = () => {
   return <section id="about" className="py-20 relative">
       <div className="container mx-auto px-4">
