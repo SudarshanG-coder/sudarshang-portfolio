@@ -58,10 +58,7 @@ const HeroSection = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in">
-            <button className="glass-button glow-primary group">
-              <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" />
-              Download Resume
-            </button>
+            
             
             <button onClick={() => document.getElementById('contact')?.scrollIntoView({
             behavior: 'smooth'
