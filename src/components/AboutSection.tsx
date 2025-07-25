@@ -1,4 +1,4 @@
-import avatarImage from '@/assets/sudarshan-professional.jpg';
+const avatarImage = '/lovable-uploads/c51766b8-0b24-437b-9273-105cbabb051d.png';
 const AboutSection = () => {
   return <section id="about" className="py-20 relative">
       <div className="container mx-auto px-4">
@@ -14,9 +14,9 @@ const AboutSection = () => {
             {/* Profile Image */}
             <div className="flex justify-center animate-scale-in">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30 animate-glow-pulse" />
-                <div className="relative glass-card p-2">
-                  <img src={avatarImage} alt="Sudarshan G" className="w-80 h-80 object-cover rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-primary rounded-full blur-xl opacity-30 animate-glow-pulse" />
+                <div className="relative glass-card p-2 rounded-full">
+                  <img src={avatarImage} alt="Sudarshan G" className="w-80 h-80 object-cover rounded-full" />
                 </div>
               </div>
             </div>
