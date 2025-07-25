@@ -8,9 +8,7 @@ const SkillsSection = () => {
       icon: <Code className="w-6 h-6" />,
       skills: [
         { name: "Python", level: 90 },
-        { name: "SQL", level: 85 },
-        { name: "JavaScript", level: 80 },
-        { name: "C++", level: 75 }
+        { name: "SQL", level: 85 }
       ]
     },
     {
