@@ -4,7 +4,7 @@ const ExperienceSection = () => {
   const experience = {
     company: "Deepcept AI",
     role: "AI & ML Development Intern",
-    duration: "2024",
+    duration: "2025-Present",
     location: "Remote",
     description: "Focused on developing cutting-edge machine learning models and implementing scalable AI solutions.",
     achievements: [
