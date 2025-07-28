@@ -1,4 +1,6 @@
+import React from 'react';
 import { Clock, ArrowRight, Brain, Shield, Database } from 'lucide-react';
+
 const BlogSection = () => {
   const blogs = [{
     title: "My Journey into Machine Learning",
