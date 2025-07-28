@@ -18,7 +18,7 @@ const AboutSection = () => {
                 <div className="absolute inset-0 bg-gradient-primary rounded-full blur-xl opacity-60 animate-pulse" style={{ animationDelay: '0.5s' }} />
                 <div className="absolute inset-0 bg-accent rounded-full blur-lg opacity-30 animate-pulse" style={{ animationDelay: '1s' }} />
                 <div className="relative glass-card p-2 rounded-full">
-                  <img src={avatarImage} alt="Sudarshan G" className="w-80 h-80 object-cover rounded-full" />
+                  <img src={avatarImage} alt="Sudarshan G" className="w-80 h-80 object-cover rounded-full animate-pulse" />
                 </div>
               </div>
             </div>
