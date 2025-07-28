@@ -116,16 +116,24 @@ const ProjectsSection = () => {
         </div>
 
         {/* View More Projects */}
-        <div className="text-center mt-12 animate-fade-in">
-          <a 
-            href="https://github.com/SudarshanG-coder"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass-button glow-secondary group"
-          >
-            <Github className="w-5 h-5 mr-3 group-hover:animate-spin" />
-            View All Projects on GitHub
-          </a>
+        <div className="flex justify-center mt-12 animate-fade-in">
+          <div className="glass-card p-8 text-center max-w-md">
+            <h3 className="text-xl font-heading font-bold mb-4 text-gradient-primary">
+              Explore More Projects
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Discover additional projects and contributions on my GitHub profile
+            </p>
+            <a 
+              href="https://github.com/SudarshanG-coder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-button glow-secondary group w-full"
+            >
+              <Github className="w-5 h-5 mr-3 group-hover:animate-spin" />
+              View All Projects on GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>
