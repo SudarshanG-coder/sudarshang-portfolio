@@ -21,7 +21,7 @@ const ExperienceSection = () => {
     {
       institution: "SJC Institute of Technology",
       degree: "B.E. in Electronics and Communication Engineering",
-      duration: "2021 - Present",
+      duration: "2021-2024",
       score: "CGPA: 8.6",
       status: "current"
     },
