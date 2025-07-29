@@ -14,9 +14,10 @@ const AboutSection = () => {
             {/* Profile Image */}
             <div className="flex justify-center animate-scale-in">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-40 animate-pulse" />
-                <div className="absolute inset-0 bg-gradient-primary rounded-full blur-xl opacity-60 animate-pulse" style={{ animationDelay: '0.5s' }} />
-                <div className="absolute inset-0 bg-accent rounded-full blur-lg opacity-30 animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute inset-0 bg-gradient-primary rounded-full blur-3xl opacity-70 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-80 animate-pulse" style={{ animationDelay: '0.3s' }} />
+                <div className="absolute inset-0 bg-accent rounded-full blur-xl opacity-60 animate-pulse" style={{ animationDelay: '0.6s' }} />
+                <div className="absolute inset-0 bg-primary rounded-full blur-lg opacity-50 animate-pulse" style={{ animationDelay: '0.9s' }} />
                 <div className="relative glass-card p-2 rounded-full animate-pulse">
                   <img src={avatarImage} alt="Sudarshan G" className="w-80 h-80 object-cover rounded-full" />
                 </div>
