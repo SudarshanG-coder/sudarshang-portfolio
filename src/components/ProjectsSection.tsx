@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       description: "Real-time LPG gas leakage and level alert system with GSM module integration. Recognized in KSCST Project Exhibition for innovative safety solutions.",
       tags: ["IoT", "Arduino", "GSM", "Safety Systems"],
       icon: <Cpu className="w-8 h-8" />,
-      github: "https://github.com/SudarshanG-coder",
+      github: "https://github.com/SudarshanG-coder/IOT-LPG-Monitoring-Systems",
       gradient: "from-secondary to-primary",
       award: "KSCST Exhibition Recognition"
     },
