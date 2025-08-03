@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       description: "Innovative inductive coupling-based wireless charger for mobile devices. Demonstrates efficient power transmission through electromagnetic fields.",
       tags: ["Electronics", "Wireless Technology", "Circuit Design"],
       icon: <Zap className="w-8 h-8" />,
-      github: "https://github.com/SudarshanG-coder",
+      github: "https://github.com/SudarshanG-coder/Wireless-Power-Transfer-Prototype",
       gradient: "from-accent to-secondary"
     }
   ];
