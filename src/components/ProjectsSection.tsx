@@ -4,21 +4,21 @@ import laptopImage from '@/assets/laptop-coding.jpg';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Fake News Classification Using NLP",
-      description: "A machine learning project that detects fake news using Natural Language Processing techniques like TF-IDF, Logistic Regression, and transformer models such as BERT and RoBERTa.",
-      tags: ["Python", "Scikit-learn", "Pandas", "NumPy", "NLP", "BERT", "RoBERTa"],
-      icon: <Brain className="w-8 h-8" />,
-      github: "https://github.com/SudarshanG-coder",
-      gradient: "from-primary to-accent",
-      badge: "AI/ML"
-    },
-    {
       title: "ML Algorithm Visualization Tool",
       description: "A comprehensive Python + Qt based visualization tool for machine learning algorithms using Scikit-Learn. Features interactive plots, real-time parameter tuning, and algorithm comparison capabilities.",
       tags: ["Python", "Qt", "Scikit-Learn", "Data Visualization"],
       icon: <Brain className="w-8 h-8" />,
       github: "https://github.com/SudarshanG-coder",
       gradient: "from-primary to-accent"
+    },
+    {
+      title: "Fake News Classification Using NLP",
+      description: "A machine learning project that detects fake news using Natural Language Processing techniques like TF-IDF and Logistic Regression, including accuracy evaluation and confusion matrix visualization.",
+      tags: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "NLP"],
+      icon: <Brain className="w-8 h-8" />,
+      github: "https://github.com/SudarshanG-coder",
+      gradient: "from-primary to-accent",
+      badge: "AI/ML"
     },
     {
       title: "IoT LPG Monitoring System",
