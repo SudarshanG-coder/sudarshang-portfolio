@@ -16,7 +16,7 @@ const ProjectsSection = () => {
       description: "A machine learning project that detects fake news using Natural Language Processing techniques like TF-IDF and Logistic Regression, including accuracy evaluation and confusion matrix visualization.",
       tags: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "NLP"],
       icon: <Brain className="w-8 h-8" />,
-      github: "https://github.com/SudarshanG-coder",
+      github: "https://github.com/SudarshanG-coder/Fake_News_Classification_Using_NLP",
       gradient: "from-primary to-accent",
       badge: "AI/ML"
     },
