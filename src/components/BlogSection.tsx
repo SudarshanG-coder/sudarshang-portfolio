@@ -26,6 +26,66 @@ const BlogSection = () => {
     gradient: "from-accent to-secondary",
     date: "Oct 2024"
   }];
-  return;
+
+  return (
+    <section id="blog" className="py-20 relative">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gradient-primary">
+            Latest Insights
+          </h2>
+          <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full" />
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+            Thoughts on technology, innovation, and development
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogs.map((blog, index) => (
+            <div 
+              key={blog.title}
+              className="group glass-card hover:glow-primary transition-all duration-500 hover:scale-105 animate-slide-up"
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
+              <div className={`w-12 h-12 bg-gradient-to-r ${blog.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:animate-float text-white`}>
+                {blog.icon}
+              </div>
+
+              <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                <Clock className="w-3 h-3" />
+                <span>{blog.readTime}</span>
+                <span>•</span>
+                <span>{blog.date}</span>
+              </div>
+
+              <h3 className="text-lg font-heading font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
+                {blog.title}
+              </h3>
+
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                {blog.excerpt}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {blog.tags.map((tag) => (
+                  <span 
+                    key={tag}
+                    className="px-2 py-1 glass text-xs font-medium rounded-full text-primary border border-primary/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <button className="flex items-center gap-2 text-primary hover:text-primary-glow transition-colors duration-300 group/btn">
+                <span className="text-sm font-medium">Read More</span>
+                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 export default BlogSection;
