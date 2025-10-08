@@ -1,8 +1,17 @@
-import { Github, ExternalLink, Brain, Cpu, Zap } from 'lucide-react';
+import { Github, ExternalLink, Brain, Cpu, Zap, Eye } from 'lucide-react';
 import laptopImage from '@/assets/laptop-coding.jpg';
 
 const ProjectsSection = () => {
   const projects = [
+    {
+      title: "YOLO11 Custom Training",
+      description: "Advanced computer vision project implementing YOLO11 (You Only Look Once) object detection with custom dataset training for real-time object recognition and detection.",
+      tags: ["YOLO11", "Computer Vision", "Deep Learning", "PyTorch", "Object Detection"],
+      icon: <Eye className="w-8 h-8" />,
+      github: "https://github.com/SudarshanG-coder/YOLO11-Custom-Training.git",
+      gradient: "from-accent to-primary",
+      badge: "AI/ML"
+    },
     {
       title: "Fake News Classification Using NLP",
       description: "A machine learning project that detects fake news using Natural Language Processing techniques like TF-IDF and Logistic Regression, including accuracy evaluation and confusion matrix visualization.",
