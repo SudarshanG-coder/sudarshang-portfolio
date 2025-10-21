@@ -56,7 +56,7 @@ const SkillsSection = () => {
       icon: <Cpu className="w-6 h-6" />,
       skills: [
         { name: "Arduino", level: 85 },
-        { name: "Raspberry Pi", level: 74 },
+        { name: "Raspberry Pi", level: 72 },
         { name: "Circuit Design", level: 78 },
         { name: "Sensors", level: 85 }
       ]
