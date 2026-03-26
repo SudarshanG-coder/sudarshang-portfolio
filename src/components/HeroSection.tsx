@@ -3,8 +3,9 @@ import { Download, ArrowDown, Github, Linkedin } from 'lucide-react';
 import codingImage from '@/assets/coding-monitor.jpg';
 const HeroSection = () => {
   const [text, setText] = useState('');
-  const fullText = "Where Security Meets Intelligence";
-  const subtitle = "Cybersecurity & AI Engineer";
+  const fullText = "Hi, I'm Sudarshan G";
+  const subtitle = "Where Security Meets Intelligence";
+  const role = "Cybersecurity & AI Engineer";
   const tagline = "Building secure systems and intelligent AI solutions that solve real-world problems.";
   useEffect(() => {
     let index = 0;
