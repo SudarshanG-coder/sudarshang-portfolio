@@ -29,27 +29,26 @@ const AboutSection = () => {
             <div className="space-y-6 animate-slide-up">
               <div className="glass-card">
                 <h3 className="text-2xl font-heading font-bold mb-6 text-gradient-secondary">
-                  AI Enthusiast & Software Engineer
+                  Cybersecurity & AI Engineer
                 </h3>
-                
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
-                  <p>
-                    I'm a passionate <span className="text-accent font-semibold">AI and Software Engineering Intern at Deepcept AI</span>, with a B.E. in Electronics and Communication Engineering. My journey in technology is driven by an insatiable curiosity to transform complex data into intelligent, scalable solutions.
-                  </p>
-                  
-                  <p>
-                    With hands-on experience at <span className="text-accent font-semibold">Deepcept AI</span>, I've developed 
-                    ML models, Dockerized AI applications, and worked extensively with Gen-AI and clustering projects. 
-                    I believe in the power of collaboration and continuous learning to push the boundaries of what's possible.
-                  </p>
-                  
-                  <p>
-                    When I'm not coding, you'll find me exploring the latest trends in artificial intelligence, 
-                    contributing to open-source projects, or sharing knowledge through technical blogs. 
-                    I'm always excited to take on new challenges and contribute to innovative solutions.
-                  </p>
-                </div>
-
+                <p>
+                  I'm a passionate <span className="text-accent font-semibold">Cybersecurity & AI Engineer</span> with a background in Electronics and Communication Engineering, focused on building secure and intelligent systems.
+                </p>
+                
+                <p>
+                  During my experience at <span className="text-accent font-semibold">Deepcept AI</span>, I worked on machine learning models, Gen-AI applications, and Dockerized deployments. I also explored clustering algorithms and real-world AI problem solving.
+                </p>
+                
+                <p>
+                  My interests lie at the intersection of <span className="text-accent font-semibold">Cybersecurity, AI, and Network Analysis</span>. I actively work with tools like Wireshark, and I enjoy analyzing network traffic, detecting anomalies, and building intelligent security solutions.
+                </p>
+                
+                <p>
+                  I’m also an open-source contributor and continuously upskill through hands-on projects. I aim to create impactful solutions where security meets intelligence.
+                </p>
+              </div>
+        
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 gap-6 mt-8">
                   <div className="text-center">
