@@ -3,9 +3,9 @@ import { Download, ArrowDown, Github, Linkedin } from 'lucide-react';
 import codingImage from '@/assets/coding-monitor.jpg';
 const HeroSection = () => {
   const [text, setText] = useState('');
-  const fullText = "Hi, I'm Sudarshan G";
-  const subtitle = "AI | ML | Software Engineer";
-  const tagline = "Turning ideas into intelligent solutions.";
+  const fullText = "Where Security Meets Intelligence";
+  const subtitle = "Cybersecurity & AI Engineer";
+  const tagline = "Building secure systems and intelligent AI solutions that solve real-world problems.";
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -73,7 +73,7 @@ const HeroSection = () => {
             <a href="https://github.com/SudarshanG-coder" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:glow-primary transition-all duration-300 hover:scale-110">
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com/in/sudarshan-g-AI" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:glow-accent transition-all duration-300 hover:scale-110">
+            <a href="https://linkedin.com/in/sudarshan-g-ai" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:glow-accent transition-all duration-300 hover:scale-110">
               <Linkedin className="w-6 h-6" />
             </a>
           </div>
