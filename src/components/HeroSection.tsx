@@ -46,11 +46,16 @@ const HeroSection = () => {
             <span className="text-gradient-primary">{text}</span>
             <span className="typing-cursor" />
           </h1>
-
           {/* Subtitle */}
           <h2 className="text-xl md:text-2xl lg:text-3xl font-body font-light mb-4 text-gradient-secondary animate-slide-up">
-            {subtitle}
+          {subtitle}
           </h2>
+
+          {/* Role */}
+          <p className="text-lg md:text-xl text-muted-foreground mb-6 animate-slide-up">
+          {role}
+          </p>
+         
 
           {/* Tagline */}
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto animate-slide-up">
