@@ -16,7 +16,7 @@ const Footer = () => {
     },
     {
       icon: <Mail className="w-5 h-5" />,
-      href: "mailto:gsudarshan925@gmail.com",
+      href: "mailto:gsudarshan925@gmail.com?subject=Opportunity%20for%20Sudarshan%20G",
       label: "Email"
     }
   ];
@@ -24,16 +24,21 @@ const Footer = () => {
   return (
     <footer className="relative py-12 glass border-t border-border">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
+          
           {/* Main Footer Content */}
           <div className="grid md:grid-cols-3 gap-8 mb-8">
+            
             {/* Brand */}
             <div className="text-center md:text-left">
               <div className="font-heading text-2xl font-bold text-gradient-primary mb-3">
                 Sudarshan G
               </div>
               <p className="text-muted-foreground text-sm">
-                AI Enthusiast & Software Engineer
+                Cybersecurity & AI Engineer
+              </p>
+              <p className="text-accent text-xs mt-2">
+                ISO 27001 | ISMS | AI | ML
               </p>
             </div>
 
@@ -43,13 +48,20 @@ const Footer = () => {
                 Quick Links
               </h4>
               <div className="space-y-2">
-                {['About', 'Projects', 'Experience', 'Contact'].map((link) => (
+                {[
+                  { name: "Home", id: "home" },
+                  { name: "About", id: "about" },
+                  { name: "Skills", id: "skills" },
+                  { name: "Projects", id: "projects" },
+                  { name: "Experience", id: "experience" },
+                  { name: "Contact", id: "contact" }
+                ].map((link) => (
                   <a
-                    key={link}
-                    href={`#${link.toLowerCase()}`}
+                    key={link.name}
+                    href={`#${link.id}`}
                     className="block text-muted-foreground hover:text-primary transition-colors duration-300 text-sm"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 ))}
               </div>
@@ -82,21 +94,23 @@ const Footer = () => {
 
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+            
             <div className="text-muted-foreground text-sm mb-4 md:mb-0">
               © {currentYear} Sudarshan G. All rights reserved.
             </div>
             
             <div className="flex items-center text-muted-foreground text-sm">
-              Built with 
+              Securing Systems with 
               <Heart className="w-4 h-4 mx-2 text-primary animate-pulse" />
-              using AI & React
+              using AI & Cybersecurity
             </div>
           </div>
 
-          {/* Decorative Elements */}
+          {/* Decorative Dot */}
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="w-2 h-2 bg-primary rounded-full animate-glow-pulse" />
           </div>
+
         </div>
       </div>
 
