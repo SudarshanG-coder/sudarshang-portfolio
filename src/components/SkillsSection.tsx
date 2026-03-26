@@ -1,8 +1,21 @@
-import { Brain, Database, Code, Container, GitBranch, Eye, BarChart3, Cpu } from 'lucide-react';
+import { Brain, Code, Container, Eye, BarChart3, Cpu, ShieldCheck } from 'lucide-react';
 import circuitBoardImage from '@/assets/circuit-board.jpg';
 
 const SkillsSection = () => {
   const skillCategories = [
+    {
+      title: "Cybersecurity",
+      icon: <ShieldCheck className="w-6 h-6" />,
+      skills: [
+        { name: "ISO 27001", level: 85 },
+        { name: "ISMS", level: 80 },
+        { name: "Risk Assessment", level: 78 },
+        { name: "Security Compliance", level: 80 },
+        { name: "Information Security", level: 82 },
+        { name: "Security Awareness Training", level: 75 },
+        { name: "Audit Support", level: 78 }
+      ]
+    },
     {
       title: "Programming Languages",
       icon: <Code className="w-6 h-6" />,
@@ -12,13 +25,13 @@ const SkillsSection = () => {
       ]
     },
     {
-      title: "AI/ML Frameworks",
+      title: "AI / Machine Learning",
       icon: <Brain className="w-6 h-6" />,
       skills: [
         { name: "TensorFlow", level: 88 },
         { name: "PyTorch", level: 85 },
-        { name: "Keras", level: 90 },
-        { name: "Scikit-Learn", level: 92 }
+        { name: "Scikit-Learn", level: 92 },
+        { name: "YOLO", level: 85 }
       ]
     },
     {
@@ -28,17 +41,7 @@ const SkillsSection = () => {
         { name: "NumPy", level: 90 },
         { name: "Pandas", level: 88 },
         { name: "Matplotlib", level: 85 },
-        { name: "Data Mining", level: 82 }
-      ]
-    },
-    {
-      title: "Computer Vision",
-      icon: <Eye className="w-6 h-6" />,
-      skills: [
-        { name: "OpenCV", level: 85 },
-        { name: "Image Processing", level: 80 },
-        { name: "Object Detection", level: 78 },
-        { name: "Feature Extraction", level: 82 }
+        { name: "Data Analysis", level: 85 }
       ]
     },
     {
@@ -46,19 +49,19 @@ const SkillsSection = () => {
       icon: <Container className="w-6 h-6" />,
       skills: [
         { name: "Docker", level: 75 },
-        { name: "Git", level: 70 },
-        { name: "VS Code", level: 73 },
-        { name: "Linux", level: 80 }
+        { name: "Git", level: 75 },
+        { name: "Linux", level: 80 },
+        { name: "VS Code", level: 85 }
       ]
     },
     {
-      title: "Hardware & IoT",
-      icon: <Cpu className="w-6 h-6" />,
+      title: "Computer Vision & IoT",
+      icon: <Eye className="w-6 h-6" />,
       skills: [
+        { name: "OpenCV", level: 85 },
+        { name: "Object Detection", level: 80 },
         { name: "Arduino", level: 85 },
-        { name: "Raspberry Pi", level: 72 },
-        { name: "Circuit Design", level: 78 },
-        { name: "Sensors", level: 85 }
+        { name: "Sensors & IoT", level: 82 }
       ]
     }
   ];
@@ -78,11 +81,11 @@ const SkillsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gradient-primary">
-            Skills & Expertise
+            Technical Skills
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Constantly evolving skillset focused on cutting-edge AI and software development technologies
+            Expertise in AI, Cybersecurity, and Software Development
           </p>
         </div>
 
@@ -129,7 +132,7 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Technology Icons */}
+        {/* Technology Tags */}
         <div className="mt-16 text-center">
           <h3 className="text-xl font-heading font-bold mb-8 text-gradient-secondary">
             Technologies I Work With
@@ -137,11 +140,11 @@ const SkillsSection = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               'Python', 'TensorFlow', 'PyTorch', 'Docker', 'Git', 'OpenCV', 
-              'Scikit-Learn', 'NumPy', 'Pandas', 'VS Code', 'Linux', 'Arduino'
+              'Scikit-Learn', 'NumPy', 'Pandas', 'Linux', 'Arduino', 'ISO 27001'
             ].map((tech, index) => (
               <span 
                 key={tech}
-                className="px-4 py-2 glass rounded-full text-sm font-medium hover:glow-accent transition-all duration-300 hover:scale-105 float"
+                className="px-4 py-2 glass rounded-full text-sm font-medium hover:glow-accent transition-all duration-300 hover:scale-105"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {tech}
