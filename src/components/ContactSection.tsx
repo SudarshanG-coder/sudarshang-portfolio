@@ -86,7 +86,7 @@ const ContactSection = () => {
     {
       icon: <Linkedin className="w-6 h-6" />,
       label: "LinkedIn", 
-      href: "https://linkedin.com/in/sudarshan-g-AI",
+      href: "https://linkedin.com/in/sudarshan-g-ai",
       gradient: "from-accent to-secondary"
     }
   ];
