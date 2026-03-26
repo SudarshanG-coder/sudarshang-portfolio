@@ -155,8 +155,8 @@ const ExperienceSection = () => {
               Education Timeline
             </h3>
 
-            <div className="relative">
-              <div className="absolute left-4 top-0 h-full w-0.5 bg-gradient-primary" />
+            <div className="relative min-h-full">
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-secondary opacity-80" />
 
               <div className="space-y-8">
                 {timeline.map((item, index) => (
