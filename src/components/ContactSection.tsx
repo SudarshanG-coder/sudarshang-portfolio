@@ -60,7 +60,7 @@ const ContactSection = () => {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
       value: "gsudarshan925@gmail.com",
-      href: "mailto:gsudarshan925@gmail.com"
+      href: "mailto:gsudarshan925@gmail.com?subject=Opportunity%20for%20Sudarshan%20G"
     },
     {
       icon: <Phone className="w-5 h-5" />,
@@ -71,7 +71,7 @@ const ContactSection = () => {
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
-      value: "Karnataka, India",
+      value: "Bengaluru, Karnataka, India",
       href: null
     }
   ];
@@ -106,11 +106,14 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-gradient-primary">
-            Let's Connect
+            Contact Me
           </h2>
+          <p className="text-lg text-accent font-semibold mt-2">
+            Cybersecurity & AI Engineer | Open to Opportunities
+          </p>
           <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full" />
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Ready to collaborate on innovative AI solutions? Let's discuss your next project!
+            Interested in AI, Cybersecurity, or innovative tech solutions? I'm open to internships, full-time roles, and collaborations. Let’s build something impactful.
           </p>
         </div>
 
@@ -167,7 +170,7 @@ const ContactSection = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 glass rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-transparent text-foreground placeholder-muted-foreground resize-none"
-                    placeholder="Tell me about your project or just say hello!"
+                    placeholder="Tell me about your project or opportunity..."
                   />
                 </div>
 
@@ -192,10 +195,10 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div className="animate-slide-up" style={{ animationDelay: '200ms' }}>
             <div className="space-y-8">
-              {/* Contact Details */}
+              
               <div className="glass-card">
                 <h3 className="text-2xl font-heading font-bold mb-6 text-gradient-secondary">
                   Get in Touch
@@ -208,14 +211,11 @@ const ContactSection = () => {
                         {info.icon}
                       </div>
                       <div>
-                        <div className="text-sm font-medium text-muted-foreground">
+                        <div className="text-sm text-muted-foreground">
                           {info.label}
                         </div>
                         {info.href ? (
-                          <a 
-                            href={info.href}
-                            className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-                          >
+                          <a href={info.href} className="text-foreground hover:text-primary font-medium">
                             {info.value}
                           </a>
                         ) : (
@@ -229,7 +229,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Social Links */}
               <div className="glass-card">
                 <h3 className="text-xl font-heading font-bold mb-6 text-gradient-secondary">
                   Follow Me
@@ -242,30 +241,27 @@ const ContactSection = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center p-4 glass rounded-lg hover:glow-primary transition-all duration-300 hover:scale-105 group"
+                      className="flex items-center justify-center p-4 glass rounded-lg hover:scale-105"
                     >
-                      <div className={`p-2 bg-gradient-to-r ${social.gradient} rounded-lg mr-3 group-hover:animate-float`}>
-                        {social.icon}
-                      </div>
-                      <span className="font-medium text-foreground group-hover:text-primary transition-colors duration-300">
-                        {social.label}
-                      </span>
+                      {social.icon}
+                      <span className="ml-2">{social.label}</span>
                     </a>
                   ))}
                 </div>
               </div>
 
-              {/* Quick Note */}
-              <div className="glass-card bg-gradient-to-r from-primary/10 to-accent/10">
-                <div className="text-center">
-                  <h4 className="text-lg font-heading font-bold mb-3 text-gradient-primary">
-                    Let's Build Something Amazing Together!
-                  </h4>
-                  <p className="text-muted-foreground">
-                    Whether it's AI, ML, IoT, or any innovative tech project, I'm always excited to collaborate and create impactful solutions.
-                  </p>
-                </div>
+              <div className="glass-card bg-gradient-to-r from-primary/10 to-accent/10 text-center">
+                <h4 className="text-lg font-heading font-bold mb-3 text-gradient-primary">
+                  Securing Systems. Building Intelligence.
+                </h4>
+                <p className="text-accent font-medium mb-2">
+                  Cybersecurity | AI | ISMS | ISO 27001
+                </p>
+                <p className="text-muted-foreground">
+                  Let’s collaborate on impactful and secure solutions.
+                </p>
               </div>
+
             </div>
           </div>
         </div>
