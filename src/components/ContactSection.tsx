@@ -14,6 +14,19 @@ const ContactSection = () => {
 
 const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
+
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(formData.email)) {
+    toast({
+      title: "Invalid Email",
+      description: "Please enter a valid email address.",
+      variant: "destructive",
+    });
+    return;
+  }
+
   setIsSubmitting(true);
 
   try {
@@ -46,14 +59,10 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     console.error("Form Error:", error);
 
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
+      title: "Submission Issue",
+      description:
+        "Your message may have been sent successfully. If you don't hear back, please contact me directly at gsudarshan925@gmail.com",
+      variant: "destructive",
     });
   } finally {
     setIsSubmitting(false);
