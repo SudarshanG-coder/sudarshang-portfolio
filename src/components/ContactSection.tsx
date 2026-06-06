@@ -19,8 +19,11 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   const emailRegex =
   /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
   
-  console.log("Email:", formData.email);
-  console.log("Valid:", emailRegex.test(formData.email.trim()));
+  console.log("Email Entered:", formData.email);
+  console.log(
+  "Is Valid:",
+  emailRegex.test(formData.email.trim())
+);
 
   if (!emailRegex.test(formData.email)) {
     toast({
