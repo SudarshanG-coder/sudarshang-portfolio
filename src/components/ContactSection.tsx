@@ -31,20 +31,23 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     }),
   });
 
-  if (response.ok) {
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
+  console.log("Status:", response.status);
+  console.log("Status Text:", response.statusText);
 
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-  } else {
-    throw new Error("Form submission failed");
-  }
+  const responseText = await response.text();
+  console.log("Response Body:", responseText);
+
+  toast({
+    title: "Message Sent!",
+    description: "Thank you for reaching out. I'll get back to you soon!",
+  });
+
+  setFormData({
+    name: "",
+    email: "",
+    message: "",
+  });
+
 } catch (error) {
   console.error("Form Error:", error);
 
@@ -56,7 +59,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 } finally {
   setIsSubmitting(false);
 }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
