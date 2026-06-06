@@ -73,7 +73,7 @@ const HeroSection = () => {
             className="glass-button group text-base flex flex-col items-center justify-center"
                >
                   <span>Connect with Me</span>
-                  <ArrowDown className="w-5 h-5 mt-2 group-hover:animate-bounce" />
+                  <ArrowDown className="w-5 h-5 mt-4 group-hover:animate-bounce" />
                 </button>
           </div>
           
