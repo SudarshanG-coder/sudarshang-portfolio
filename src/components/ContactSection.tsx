@@ -15,6 +15,29 @@ const ContactSection = () => {
 const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
+  // Common email typo detection
+  const commonTypos: Record<string, string> = {
+    "gmailc.om": "gmail.com",
+    "gmil.com": "gmail.com",
+    "gmial.com": "gmail.com",
+    "outlok.com": "outlook.com",
+    "yahho.com": "yahoo.com",
+  };
+
+  const domain = formData.email.split("@")[1]?.toLowerCase();
+
+  if (domain && commonTypos[domain]) {
+    toast({
+      title: "Possible Email Typo",
+      description: `Did you mean ${formData.email.replace(
+        domain,
+        commonTypos[domain]
+      )}?`,
+      variant: "destructive",
+    });
+    return;
+  }
+
   // Email validation
   const emailRegex =
     /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
