@@ -69,10 +69,11 @@ const HeroSection = () => {
             <button onClick={() => document.getElementById('contact')?.scrollIntoView({
             behavior: 'smooth'
           })} className="glass-button group text-base">
-              Connect with Me
-              <ArrowDown className="w-5 h-5 ml-3 group-hover:animate-bounce" />
-            </button>
-          </div>
+                Connect with Me
+              </button>
+ 
+              <ArrowDown className="w-5 h-5 mt-4 animate-bounce text-primary" />
+         </div>
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mt-12 animate-fade-in">
