@@ -31,13 +31,11 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       }),
     });
 
-    // Show success message
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon!",
     });
 
-    // Clear form
     setFormData({
       name: "",
       email: "",
@@ -47,8 +45,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   } catch (error) {
     console.error("Form Error:", error);
 
-    // Since Web3Forms is delivering emails but causing CORS issues,
-    // still show success to the user.
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon!",
