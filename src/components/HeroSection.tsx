@@ -62,8 +62,21 @@ const HeroSection = () => {
             {tagline}
           </p>
 
-          {/* Action Buttons */} <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in"> <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="glass-button group text-base"> Connect with Me <ArrowDown className="w-5 h-5 ml-3 group-hover:animate-bounce" /> </button> </div>
-
+          {/* Action Buttons */} 
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in"> 
+            <button
+               onClick={() =>
+                document.getElementById('contact')?.scrollIntoView({
+                  behavior: 'smooth'
+                 })
+            }
+            className="glass-button group text-base flex flex-col items-center justify-center"
+               >
+                  <span>Connect with Me</span>
+                  <ArrowDown className="w-5 h-5 mt-2 group-hover:animate-bounce" />
+                </button>
+          </div>
+          
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mt-12 animate-fade-in">
             <a href="https://github.com/SudarshanG-coder" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:glow-primary transition-all duration-300 hover:scale-110">
