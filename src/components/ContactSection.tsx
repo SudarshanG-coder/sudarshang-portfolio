@@ -12,41 +12,55 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    try {
-      const formData = new FormData(e.target as HTMLFormElement);
-      formData.append('access_key', 'abf7eaad-2df2-44a4-a92c-6dec5abd5215');
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "abf7eaad-2df2-44a4-a92c-6dec5abd5215",
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    });
 
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      });
+    const data = await response.json();
 
-      const data = await response.json();
+    console.log("Web3Forms Response:", data);
 
-      if (data.success) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for reaching out. I'll get back to you soon!",
-        });
-        
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
+    if (data.success) {
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
       });
-    } finally {
-      setIsSubmitting(false);
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      throw new Error(data.message || "Form submission failed");
     }
-  };
+  } catch (error) {
+    console.error("Form Error:", error);
+
+    toast({
+      title: "Error",
+      description: "Failed to send message. Please try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
